@@ -3,6 +3,7 @@ import react from "@vitejs/plugin-react-swc";
 import { defineConfig } from "vite";
 
 export default defineConfig({
+  base: "./", 
   plugins: [react()],
   resolve: {
     alias: {
@@ -10,6 +11,6 @@ export default defineConfig({
     },
   },
   build: {
-    outDir: "dist", // Important for Vercel
+    outDir: "dist",
   },
 });
