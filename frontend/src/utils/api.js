@@ -9,7 +9,7 @@ api.interceptors.request.use(
   (config) => {
     const token = localStorage.getItem('token');
 
-    // ⛔ Do NOT attach token for public endpoints like login or register
+
     const isPublicEndpoint = config.url.includes('/auth/login') || config.url.includes('/auth/register');
 
     if (token && !isPublicEndpoint) {
