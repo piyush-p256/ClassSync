@@ -32,6 +32,9 @@ app.use('/api/auth', authRoutes);
 const schoolRoutes = require('./routes/schoolRoutes');
 app.use('/api/schools', schoolRoutes);
 
+const chatbotRoutes = require('./routes/chatbotRoutes.js');
+app.use('/api/chatbot', chatbotRoutes);
+
 // 🔒 Protected Routes (WITH auth & context)
 app.use(auth); // ← Only from this point on
 app.use(schoolContext);
@@ -53,5 +56,7 @@ app.use('/api/conflicts', conflictRoutes);
 
 const adminRoutes = require('./routes/adminRoutes');
 app.use('/api/admin', adminRoutes);
+
+
 
 module.exports = app;
